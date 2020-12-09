@@ -19,12 +19,12 @@ html(lang="en")
 
     div(id="main")
       div(id="cvs-wrapper")
-      form(method="post" name="form" autocomplete="off")
+      form(name="form" autocomplete="off" onsubmit="return googleeSearch()" action="https://www.google.com/search?")
         div(class="input-wrapper")
           <i class="fas fa-search"></i>
-          input(name="content")
+          input(name="q")
       div(class="btn-wrapper")
-        button(type="submit" class="btn search") Googlee 検索
+        button(class="btn search" onclick="googleeSearch()") Googlee 検索
         button(class="btn ghost") I'm Feeling Bad
       audio(id="storm" src="src/storm.mp3" preload="auto")
 

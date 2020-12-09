@@ -1,9 +1,11 @@
-// buttons
-document.querySelector('button.search').onclick = () => {
+// search
+function googleeSearch() {
   if (document.querySelector('input').value) {
-    document.form.submit();
+    location.href = 'http://google.com/search?googlee-ReDiReCtS=showed+this+page&isnt=cool&huh=?&q=' + document.form.q.value;
   }
-};
+}
+
+// feeling bad button
 let id;
 let flag = false;
 document.querySelector('button.ghost').onclick = () => {
