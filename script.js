@@ -28,7 +28,7 @@ document.querySelector('button.ghost').addEventListener('dblclick', () => {
     let r2 = Math.random()*6-3;
     ghost(r1, r2);
   }, 50);
-  document.body.style.backgroundImage = 'url(img/storm.gif)';
+  document.body.style.backgroundImage = 'url(src/storm.gif)';
   document.querySelector('#storm').play();
   setTimeout(() => {
     flag = false;
