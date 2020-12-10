@@ -1,9 +1,19 @@
 // search
 function googleeSearch() {
   if (document.querySelector('input').value) {
-    location.href = 'http://google.com/search?googlee-ReDiReCtS=showed+this+page&isnt=cool&huh=?&q=' + document.form.q.value;
+    const r = Math.round(Math.random()*(q.length-1));
+    if (!q[r]) {
+      location.href = 'http://google.com/search?googlee-ReDiReCtS=showed+this+page&isnt=cool&huh=?&q=' + document.form.q.value;
+    } else {
+      location.href = 'http://google.com/search?googlee-ReDiReCtS=showed+this+page&isnt=cool&huh=?&q=' + q[r];
+    }
   }
 }
+window.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && document.querySelector('input').value) {
+    googleeSearch();
+  }
+})
 
 // feeling bad button
 let id;
@@ -133,3 +143,14 @@ function clearCvs() {
   ctx.fillStyle = 'white';
   ctx.fillRect(0, 0, cvs.width, cvs.height);
 }
+
+const q = [
+  0,
+  'TKG',
+  '硫酸バリウム',
+  'クリームブリュレ',
+  '山葵',
+  'ヴァニラ+アイス+クリーム',
+  '七味唐辛子',
+  'クレイジーソルト'
+];
