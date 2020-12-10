@@ -40,13 +40,13 @@ document.querySelector('button.ghost').addEventListener('dblclick', () => {
     let r2 = Math.random()*6-3;
     ghost(r1, r2);
   }, 50);
-  document.body.style.backgroundImage = 'url(src/storm.gif)';
+  document.querySelector('.storm').style.visibility = "initial"
   document.querySelector('#storm').play();
   setTimeout(() => {
     flag = false;
     clearInterval(id);
+    document.querySelector('.storm').style.visibility = "hidden"
     googlee();
-    document.body.style.backgroundImage = '';
   }, 800);
 });
 
@@ -62,7 +62,10 @@ let ctx = cvs.getContext("2d");
 let cx = cvs.clientWidth / 2 - 20;
 let cy = cvs.clientHeight / 2;
 
-window.onload = googlee;
+window.onload = () => {
+  googlee();
+
+};
 function googlee() {  
   clearCvs();
   // G

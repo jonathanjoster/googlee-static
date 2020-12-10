@@ -1,12 +1,6 @@
 * {
   outline: none;
   list-style: none;
-  body {
-    margin: 0;
-    // background-image: url(s.gif);
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-  }
 }
 
 header {
@@ -74,6 +68,19 @@ div#main {
   }
 }
 
+.storm {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  img {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 footer {
   display: flex;
   flex-flow: column;
@@ -108,7 +115,7 @@ footer {
 }
 
 @media screen and (min-width: 806px) {
-  footer{
+  footer {
     >div {
       flex-flow: row-reverse;
       .blank {
